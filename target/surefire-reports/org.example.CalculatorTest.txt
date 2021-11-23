@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.example.CalculatorTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.019 s - in org.example.CalculatorTest
