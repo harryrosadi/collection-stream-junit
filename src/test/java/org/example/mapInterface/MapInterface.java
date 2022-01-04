@@ -2,17 +2,21 @@ package org.example.mapInterface;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.NavigableMap;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.WeakHashMap;
+import java.util.stream.Collectors;
 
 public class MapInterface {
 
@@ -180,4 +184,27 @@ public class MapInterface {
 		}
 		System.out.println(map);
 	}
+
+	void groupingby(){
+		List<Object> itemOutlet = List.of(1,2,3,4);
+//		Map<Integer, List<Object>> posOutletMap = itemOutlet.stream().collect(Collectors.groupingBy(Object::getClass));
+		Integer x = null;
+		String x5 = null;
+		Map<Integer, List<String>> map = new HashMap<>();
+		if (!map.containsKey(x)){
+			map.put(x, new ArrayList<>(List.of("2","3")));
+		}else {
+			List<String> xx = map.get(x);
+			xx.add(x5);
+			map.put(x, xx);
+
+		}
+
+		for (Map.Entry<Integer, List<String>> entry : map.entrySet()) {
+			Integer key = entry.getKey();
+			List<String> value = entry.getValue();
+
+		}
+	}
 }
+
